@@ -1,4 +1,12 @@
 {
+  "name": "@beegru/recompose",
+  "author": "Siddhant Vinchurkar <siddhantvinchurkar@gmail.com>",
+  "version": "0.30.3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Beegru/recompose.git"
+  },
+  "license": "MIT",
   "description": "A React utility belt for function components and higher-order components",
   "keywords": [
     "react",
