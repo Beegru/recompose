@@ -1,17 +1,17 @@
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs';
+import path from 'path';
 
-exports.PACKAGES_SRC_DIR = './src/packages'
-exports.PACKAGES_OUT_DIR = './lib/packages'
+export const PACKAGES_SRC_DIR = './src/packages';
+export const PACKAGES_OUT_DIR = './lib/packages';
 
 let names
 
-exports.getPackageNames = () => {
+export const getPackageNames = () => {
   if (!names) {
-    names = fs.readdirSync(exports.PACKAGES_SRC_DIR).filter(file => {
+    names = fs.readdirSync(PACKAGES_SRC_DIR).filter(file => {
       try {
         const packageJsonPath = path.resolve(
-          exports.PACKAGES_SRC_DIR,
+          PACKAGES_SRC_DIR,
           file,
           'package.json'
         )

@@ -1,7 +1,7 @@
 {
   "name": "@beegru/recompose",
   "author": "Siddhant Vinchurkar <siddhantvinchurkar@gmail.com>",
-  "version": "0.30.1",
+  "version": "0.30.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/Beegru/recompose.git"
@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint scripts src",
-    "build:recompose": "cross-env PACKAGE_NAME=recompose rollup --config scripts/rollup.config.js",
+    "build:recompose": "cross-env NODE_OPTIONS=--openssl-legacy-provider PACKAGE_NAME=@beegru/recompose rollup --config scripts/rollup.config.mjs",
     "test": "jest && flow check && cross-env SNAPSHOT=match npm run build:recompose",
     "test:watch": "cross-env BABEL_ENV=cjs jest --watch",
     "release": "node scripts/release.js",
@@ -81,7 +81,6 @@
     "rollup-plugin-uglify": "^6.0.4",
     "rx": "^4.1.0",
     "rxjs": "^7.8.1",
-    "shelljs": "^0.8.5",
     "sinon": "^17.0.1",
     "webpack": "^5.91.0",
     "xstream": "^11.14.0"
@@ -91,6 +90,9 @@
     "npm": "3.x"
   },
   "dependencies": {
-    "@cfaester/enzyme-adapter-react-18": "^0.8.0"
-  }
+    "@cfaester/enzyme-adapter-react-18": "^0.8.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.5"
+  },
+  "type": "module"
 }

@@ -1,6 +1,8 @@
-const path = require('path')
-const { exec } = require('shelljs')
-const { getPackageNames, PACKAGES_SRC_DIR } = require('./getPackageNames.js')
+import path from 'path';
+import shelljs from 'shelljs';
+import { getPackageNames, PACKAGES_SRC_DIR } from './getPackageNames.js';
+
+const { exec } = shelljs;
 
 const packageNames = getPackageNames()
 

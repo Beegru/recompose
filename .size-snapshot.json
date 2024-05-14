@@ -22,5 +22,29 @@
         "code": 1838
       }
     }
+  },
+  "BeegruRecompose.umd.js": {
+    "bundled": 55265,
+    "minified": 19778,
+    "gzipped": 5709
+  },
+  "BeegruRecompose.min.js": {
+    "bundled": 48533,
+    "minified": 18509,
+    "gzipped": 5290
+  },
+  "BeegruRecompose.esm.js": {
+    "bundled": 32337,
+    "minified": 15261,
+    "gzipped": 3581,
+    "treeshaked": {
+      "rollup": {
+        "code": 343,
+        "import_statements": 343
+      },
+      "webpack": {
+        "code": 1931
+      }
+    }
   }
 }

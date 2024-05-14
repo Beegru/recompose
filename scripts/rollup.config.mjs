@@ -1,13 +1,13 @@
-import path from 'path'
-import nodeResolve from 'rollup-plugin-node-resolve'
-import babel from 'rollup-plugin-babel'
-import replace from 'rollup-plugin-replace'
-import commonjs from 'rollup-plugin-commonjs'
-import { uglify } from 'rollup-plugin-uglify'
-import { sizeSnapshot } from 'rollup-plugin-size-snapshot'
-import { pascalCase } from 'change-case'
+import { pascalCase } from 'change-case';
+import path from 'path';
+import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
+import nodeResolve from 'rollup-plugin-node-resolve';
+import replace from 'rollup-plugin-replace';
+import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
+import { uglify } from 'rollup-plugin-uglify';
 
-const { PACKAGES_SRC_DIR, PACKAGES_OUT_DIR } = require('./getPackageNames')
+import { PACKAGES_OUT_DIR, PACKAGES_SRC_DIR } from './getPackageNames.js';
 
 const packageName = process.env.PACKAGE_NAME
 
